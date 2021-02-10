@@ -177,7 +177,7 @@ try {
 		/*let a = arr[0];
 		let b = arr[2];
 		let c = arr.slice(3); */
-		let [a, b, c] = [arr[0], arr[2], arr.slice(3)];
+		const [a, , b, ...c] = arr;
 
 		// Don't make changes below this line	
 		
