@@ -23,9 +23,9 @@ try {
 
    (function UseLetOrConst() {
      // Use let (or const) instead of var to make the function succeed.
-     var x = 1;
+     const x = 1;
      if (true) {
-       const x = 2;
+       let x = 2;
      }
 
      // Don't make changes below this line
@@ -60,10 +60,7 @@ try {
 	(function UseDefaultParameters() {
     
 		// Correct the syntax errors in the function.
-		function hello(who) {
-			if (who == null) {
-				who = "World";
-			}
+		function hello(who = "World") {
 			return 'Hello ' + who + '!';
 		}
 
@@ -222,7 +219,7 @@ try {
 		/*let name = obj.name;
 		let age = obj.age;
 		let add = obj.add;*/
-		let [name, age, add] = [obj.name, obj.age, obj.add];
+		let {name, age, add} = obj;
 
 		// Don't make changes below this line	
 		
